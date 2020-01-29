@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Work 1</title>
+    <style>
+        html {
+            font-family: "Noto Mono", serif;
+        }
+
+        body {
+            background-color: #949393;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+
+        .sections {
+            display: flex;
+            flex-flow: column wrap;
+            background-color: white;
+            flex: 300px;
+            max-width: 850px;
+        }
+
+        section {
+            display: flex;
+            flex-flow: row wrap;
+            flex: 180px;
+            padding: 40px;
+        }
+
+        .header {
+            background-color: antiquewhite;
+            display: flex;
+            flex: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+
+        .footer {
+            display: flex;
+            flex: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .the-product {
+            background-color: #445162;
+            color: white;
+            justify-content: space-between;
+        }
+
+        .the-product-info {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+        }
+
+        .the-product-name {
+            font-size: xx-large;
+        }
+
+        .the-product-info-short {
+            font-size: large;
+            max-width: 430px;
+        }
+
+        .the-product-logo {
+            background-color: white;
+            width: 310px;
+            height: 150px;
+        }
+
+        .about {
+            background-color: white;
+            color: #445161;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+
+        .about-info {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            flex: 1;
+        }
+
+        .about-info-name {
+            font-size: x-large;
+        }
+
+        .about-info-short {
+            max-width: 430px;
+        }
+
+        .about-logo {
+            background-color: #445161;
+            width: 310px;
+            height: 150px;
+        }
+
+        .pluses {
+            background-color: lightgray;
+            color: #333333;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+
+        .pluses-header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: large;
+            font-weight: bold;
+            color: #445161;
+        }
+
+        .pluses-content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        article {
+            flex: 1 300px;
+            display: flex;
+        }
+
+        .plus-image {
+            background-color: #445161;
+            color: black;
+            font-size: xx-large;
+            font-weight: bold;
+            padding: 3px;
+            align-self: flex-start;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-basis: 85px;
+        }
+
+        article > div {
+            margin: 5px;
+        }
+
+        .screenshots {
+            background-color: white;
+            color: #333333;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+
+        .screenshots-header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: large;
+            font-weight: bold;
+            color: #445161;
+        }
+
+        .screenshots-content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .screenshots-image {
+            background-color: #445161;
+            flex: 1 1 400px
+        }
+
+        .screenshots-head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: medium;
+            color: #445161;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sections">
+        <div class="header">
+            <h1>Home Work 1</h1>
+        </div>
+        <section class="the-product">
+            <div class="the-product-info">
+                <div class="the-product-name">Product name</div>
+                <div class="the-product-info-short">
+                    данные
+                </div>
+            </div>
+            <div class="the-product-logo">
+                image
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-info">
+                <div class="about-info-name">About your product</div>
+                <div class="about-info-short">
+                    <p>Данные очень длинные данные тут совсем длинные и очень длинные </p>
+                    <p>Описание</p>
+                    <p>Текст</p>
+                </div>
+            </div>
+            <div class="about-logo">
+                image
+            </div>
+        </section>
+        <section class="pluses">
+            <div class="pluses-header">
+                Dignity and pluses product
+            </div>
+            <div class="pluses-content">
+                <article>
+                    <div class="plus-image">
+                        +
+                    </div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image">+</div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image">+</div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image">+</div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="screenshots">
+            <div class="screenshots-header">
+                Screenshots
+            </div>
+            <div class="screenshots-content">
+                <article>
+                    <div class="screenshots-image">
+                    </div>
+                    <div>
+                        <div class="screenshots-head">
+                            Это заголовок
+                        </div>
+                        <div>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="screenshots-image">
+                    </div>
+                    <div>
+                        <div class="screenshots-head">
+                            Это заголовок
+                        </div>
+                        <div>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="screenshots-image">
+                    </div>
+                    <div>
+                        <div class="screenshots-head">
+                            Это заголовок
+                        </div>
+                        <div>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="screenshots-image">
+                    </div>
+                    <div>
+                        <div class="screenshots-head">
+                            Это заголовок
+                        </div>
+                        <div>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="footer">
+            <h5>Copyright @ 2019</h5>
+        </div>
+    </div>
+</div>
+</body>
+</html>
