@@ -1,0 +1,30 @@
+$site-width: 600px
+$border-width: 1px
+
+header
+  width: $site-width
+  margin: 0 auto
+  height: 100px
+  background-color: green
+
+.main
+  display: flex
+
+main
+  width: $site-width
+  margin: 0 auto
+  background-color: orange
+  display: flex
+  flex-wrap: wrap
+
+
+.item
+  width: $site-width / 3 - 2 * $border-width
+  height: 200px
+  border: $border-width solid #000000
+
+footer
+  width: $site-width
+  margin: 0 auto
+  height: 100px
+  background-color: #ccc

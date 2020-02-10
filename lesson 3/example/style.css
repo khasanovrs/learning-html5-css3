@@ -1,0 +1,33 @@
+header {
+  width: 600px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: green;
+}
+
+.main {
+  display: flex;
+}
+
+main {
+  width: 600px;
+  margin: 0 auto;
+  background-color: orange;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 198px;
+  height: 200px;
+  border: 1px solid #000000;
+}
+
+footer {
+  width: 600px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */

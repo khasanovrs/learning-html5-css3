@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Work 2</title>
+    <style>
+        html {
+            font-family: arial, serif;
+        }
+
+        body {
+            background-color: #949393;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+
+        .sections {
+            display: flex;
+            flex-flow: column wrap;
+            background-color: white;
+            flex: 300px;
+            max-width: 850px;
+        }
+
+        section {
+            display: flex;
+            flex-flow: row wrap;
+            flex: 180px;
+            padding: 40px;
+        }
+
+        .header {
+            background-color: antiquewhite;
+            display: flex;
+            flex: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+
+        footer {
+            display: flex;
+            flex: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .the-product {
+            background-color: #445162;
+            color: white;
+            justify-content: space-between;
+        }
+
+        .the-product-info {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+        }
+
+        .the-product-name {
+            font-size: xx-large;
+            font-weight: lighter;
+        }
+
+        .the-product-info-short {
+            font-size: large;
+            max-width: 430px;
+            list-style-type: none;
+            list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATBAMAAACXXLs2AAAAAXNSR0IB2cksfwAAACRQTFRFAAAA////////////////////////////////////////////tAmN6QAAAAx0Uk5TAJ//Xy8Pf8/vr09vSCngugAAAGNJREFUeJxjYIABRmUGJCCkZIDgMCopKSNLKSk5IEkpKaJICQBp1hRkqXANBySpIqUWJCklJQ0HmBSDE5DRCTeQWQkCBCBmG4E5MLuYkaUgkghnMCNLgSQRUiBJJCkGhtUwBgC0+Q8b5QEMAAAAAABJRU5ErkJggg==');
+        }
+
+        .the-product-logo {
+            background-color: white;
+            width: 310px;
+            height: 150px;
+        }
+
+        .about {
+            background-color: white;
+            color: #445161;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+
+        .about-info {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            flex: 1;
+        }
+
+        .about-info-name {
+            font-size: x-large;
+        }
+
+        .about-info-short {
+            max-width: 430px;
+        }
+
+        .about-logo {
+            background-color: #445161;
+            width: 310px;
+            height: 150px;
+        }
+
+        .pluses {
+            background-color: #f3f3f3;
+            color: #333333;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+
+        .pluses-header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: x-large;
+            color: #445161;
+        }
+
+        .pluses-content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        article {
+            flex: 1 300px;
+            display: flex;
+        }
+
+        .plus-image {
+            padding: 3px;
+            align-self: flex-start;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-basis: 85px;
+        }
+
+        article > div {
+            margin: 5px;
+        }
+
+        .screenshots {
+            background-color: white;
+            color: #333333;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+
+        .screenshots-header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: x-large;
+            color: #445161;
+            margin-bottom: 30px;
+        }
+
+        .screenshots-content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .screenshots-image {
+            background-color: #445161;
+            flex: 1 1 400px
+        }
+
+        .screenshots-head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: medium;
+            color: #445161;
+            font-weight: bold;
+        }
+
+        .reviews {
+            background-color: #f3f3f3;
+            color: #333333;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+
+        .reviews-header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: x-large;
+            color: #445161;
+            margin-bottom: 30px;
+        }
+
+        .reviews-content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .reviews-image-container {
+            flex: 1 1 305px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .reviews-image {
+            background-color: #445161;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .reviews-head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: medium;
+            color: #445161;
+            font-weight: bold;
+        }
+
+        .reviews-babble {
+            background: #e7eaea;
+            border-radius: .4em;
+            font-size: smaller;
+            height: 100px;
+            padding: 15px;
+            position: relative;
+        }
+
+        .reviews-babble:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 1.125em solid transparent;
+            border-right-color: #e7eaea;
+            border-left: 0;
+            margin-top: -3.125em;
+            margin-left: -1.125em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <main class="sections">
+        <header class="header">
+            <h1>Home Work 2</h1>
+        </header>
+        <section class="the-product">
+            <div class="the-product-info">
+                <header class="the-product-name">Product name</header>
+                <ul class="the-product-info-short">
+                    <li>Put on this page information about your product</li>
+                    <li>A detailed description of your product</li>
+                    <li>Tell us about the advantages and merits</li>
+                    <li>Associate the page with the payment system</li>
+                </ul>
+            </div>
+            <div class="the-product-logo">
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-info">
+                <header class="about-info-name">About your product</header>
+                <div class="about-info-short">
+                    <p>Данные очень длинные данные тут совсем длинные и очень длинные </p>
+                    <p>Описание</p>
+                    <p>Текст</p>
+                </div>
+            </div>
+            <div class="about-logo">
+                image
+            </div>
+        </section>
+        <section class="pluses">
+            <header class="pluses-header">
+                Dignity and pluses product
+            </header>
+            <div class="pluses-content">
+                <article>
+                    <div class="plus-image">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhLY3QJTGSgJWCC0jQDoxYQBDS3gIRUtGHJVG4uTiDj67fvATHZEEGCgAQfQExHZhADRiOZIBi1gCDAkg92r5sHZZEIsOYPavoAa/4YiDgA+hTKIhFg1UhCWYQcN65BSVAWITD0k+moBQTBYLIAnsxJyiijLTuCYNQCAoCBAQAIkx/sEmyXdQAAAABJRU5ErkJggg==">
+                    </div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhLY3QJTGSgJWCC0jQDoxYQBDS3gIRUtGHJVG4uTiDj67fvATHZEEGCgAQfQExHZhADRiOZIBi1gCDAkg92r5sHZZEIsOYPavoAa/4YiDgA+hTKIhFg1UhCWYQcN65BSVAWITD0k+moBQTBYLIAnsxJyiijLTuCYNQCAoCBAQAIkx/sEmyXdQAAAABJRU5ErkJggg==">
+                    </div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhLY3QJTGSgJWCC0jQDoxYQBDS3gIRUtGHJVG4uTiDj67fvATHZEEGCgAQfQExHZhADRiOZIBi1gCDAkg92r5sHZZEIsOYPavoAa/4YiDgA+hTKIhFg1UhCWYQcN65BSVAWITD0k+moBQTBYLIAnsxJyiijLTuCYNQCAoCBAQAIkx/sEmyXdQAAAABJRU5ErkJggg==">
+                    </div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="plus-image"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhLY3QJTGSgJWCC0jQDoxYQBDS3gIRUtGHJVG4uTiDj67fvATHZEEGCgAQfQExHZhADRiOZIBi1gCDAkg92r5sHZZEIsOYPavoAa/4YiDgA+hTKIhFg1UhCWYQcN65BSVAWITD0k+moBQTBYLIAnsxJyiijLTuCYNQCAoCBAQAIkx/sEmyXdQAAAABJRU5ErkJggg==">
+                    </div>
+                    <div>Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше это
+                        читать
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="screenshots">
+            <header class="screenshots-header">
+                Screenshots
+            </header>
+            <div class="screenshots-content">
+                <article>
+                    <figure class="screenshots-image">
+                    </figure>
+                    <div>
+                        <header class="screenshots-head">
+                            Это заголовок
+                        </header>
+                        <article>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </article>
+                    </div>
+                </article>
+                <article>
+                    <figure class="screenshots-image">
+                    </figure>
+                    <div>
+                        <header class="screenshots-head">
+                            Это заголовок
+                        </header>
+                        <article>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </article>
+                    </div>
+                </article>
+                <article>
+                    <figure class="screenshots-image">
+                    </figure>
+                    <div>
+                        <header class="screenshots-head">
+                            Это заголовок
+                        </header>
+                        <article>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </article>
+                    </div>
+                </article>
+                <article>
+                    <figure class="screenshots-image">
+                    </figure>
+                    <div>
+                        <header class="screenshots-head">
+                            Это заголовок
+                        </header>
+                        <article>
+                            Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                            это
+                            читать
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="reviews-header">
+                Reviews
+            </div>
+            <div class="reviews-content">
+                <article>
+                    <div class="reviews-image-container">
+                        <figure class="reviews-image"></figure>
+                    </div>
+                    <div class="reviews-babble">
+                        Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                        это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="reviews-image-container">
+                        <figure class="reviews-image"></figure>
+                    </div>
+                    <div class="reviews-babble">
+                        Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                        это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="reviews-image-container">
+                        <figure class="reviews-image"></figure>
+                    </div>
+                    <div class="reviews-babble">
+                        Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                        это
+                        читать
+                    </div>
+                </article>
+                <article>
+                    <div class="reviews-image-container">
+                        <figure class="reviews-image"></figure>
+                    </div>
+                    <div class="reviews-babble">
+                        Это текст какой-то о-о-о-о-очень много какого-то текста прям обчитаешься что не могу больше
+                        это
+                        читать
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <h5>Copyright @ 2019</h5>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
